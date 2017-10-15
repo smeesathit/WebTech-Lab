@@ -1,0 +1,37 @@
+<html lang="th">
+<head>
+  <title>RSS Samples</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0">    
+<script>
+function showRSS(str) {
+  if (str.length==0) { 
+    document.getElementById("rssOutput").innerHTML="";
+    return;
+  }
+  if (window.XMLHttpRequest) {
+    // code for IE7+, Firefox, Chrome, Opera, Safari
+    xmlhttp=new XMLHttpRequest();
+  } else {  // code for IE6, IE5
+    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  xmlhttp.onreadystatechange=function() {
+    if (this.readyState==4 && this.status==200) {
+      document.getElementById("rssOutput").innerHTML=this.responseText;
+    }
+  }
+}
+</script>
+</head>
+<body>
+<h1>ตัอย่างการใช้ PHP และ AJAX เพื่อดึง RSS-feed</h1>
+<form>
+<select onchange="แสดง RSS(this.value)">
+<option value="">เลือก RSS-feed:</option>
+<option value="BBC">BBC News (UK)</option>
+</select>
+</form>
+<br>
+<div id="rssOutput">RSS-feed จะแสดงที่นี่...</div>
+</body>
+</html>
