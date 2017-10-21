@@ -1,0 +1,1 @@
+﻿INSERT INTO `markersakon` (`id`, `name`, `address`, `lat`, `lng`, `type`) VALUES ('1', 'บ้านฟ้าโปร่ง', '1145/4 ถนน รอบเมือง ตำบล ธาตุเชิงชุม อ.เมือง จ.สกลนคร', '17.160115', '104.156745', 'restaurant');

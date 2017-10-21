@@ -10,7 +10,7 @@ $parnode = $dom->appendChild($node);
 
 // Opens a connection to a MySQL server
 
-$connection=mysql_connect ('your database URL', $username, $password);
+$connection=mysql_connect ('YOUR_DATABASE_SERVER_URL', $username, $password);
 if (!$connection) {  die('Not connected : ' . mysql_error());}
 
 // Set the active MySQL database
@@ -28,7 +28,7 @@ mysql_query("SET character_set_connection=utf8");
 
 // Select all the rows in the markers table
 
-$query = "SELECT * FROM markersakon WHERE 1";
+$query = "SELECT * FROM YOUR_TABLE_NAME WHERE 1";
 $result = mysql_query($query);
 if (!$result) {
   die('Invalid query: ' . mysql_error());
